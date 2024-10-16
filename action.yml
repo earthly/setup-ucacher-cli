@@ -20,7 +20,7 @@ runs:
       run: |
         echo "Downloading binary from ${{ inputs.binary-url }}"
         mkdir -p /tmp/ucacher/bin
-        curl -L https://github.com/earthly/react/raw/refs/heads/nacho/test-ignore/.github/ucacher -o /tmp/ucacher/bin/ucacher
+        curl -L https://github.com/earthly/actions-ucacher/raw/refs/heads/main/bin/ucacher -o /tmp/ucacher/bin/ucacher
         chmod +x /tmp/ucacher/bin/ucacher;
         echo "ucacher downloaded to /tmp/ucacher/bin/ucacher";
       shell: bash
