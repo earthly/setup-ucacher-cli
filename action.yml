@@ -25,7 +25,7 @@ runs:
       run: |
         echo '#!/bin/bash
         UCACHER_DB_URI=${{ inputs.db_uri }} \
-        UCACHER_STORAGE=${{ inputs.file_storage_uri }} \
+        UCACHER_FS_URI=${{ inputs.fs_uri }} \
         UCACHER_INSTRUMENTER=strace \
         UCACHER_SHOW_IO=true \
         FORCE_COLOR=1 \
