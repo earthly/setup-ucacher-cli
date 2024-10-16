@@ -5,10 +5,6 @@ branding:
   color: "green"
 author: Earthly technologies
 inputs:
-  aws_access_key:
-    description: "AWS_ACCESS_KEY_ID used for S3 file storage cache"
-  aws_secret_access_key:
-    description: "AWS_SECRET_ACCESS_KEY used for S3 file storage cache"
   file_storage_uri:
     description: "URI of the file storage endpoint, for example: s3://<region>/<bucket-name>"
   db_uri:
@@ -28,8 +24,6 @@ runs:
     - name: Creating ucacher wrapper
       run: |
         echo '#!/bin/bash
-        AWS_ACCESS_KEY_ID=${{ inputs.aws_access_key }} \
-        AWS_SECRET_ACCESS_KEY=${{ inputs.aws_secret_access_key }} \
         UCACHER_DB_URI=${{ inputs.db_uri }} \
         UCACHER_STORAGE=${{ inputs.file_storage_uri }} \
         UCACHER_INSTRUMENTER=strace \
